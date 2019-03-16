@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Theme, colorPallet } from "../assets/style/Theme";
 
 import Roulette from "../components/Roulette";
+import Gallery from "../components/Gallery/Gallery";
+import GalleryItem from "../components/Gallery/GalleryItem";
 
 const Billboard = styled.div`
   background-color: ${Theme.billboard.bg};
@@ -23,11 +25,25 @@ const Hero = styled.h1`
 class Home extends Component {
   render() {
     return (
-      <Billboard>
-        <Hero>Design</Hero>
-        <Roulette slides={["&", "+"]} />
-        <Hero>Code</Hero>
-      </Billboard>
+      <React.Fragment>
+        <Billboard>
+          <Hero>Design</Hero>
+          <Roulette slides={["&", "+"]} />
+          <Hero>Code</Hero>
+        </Billboard>
+        <Gallery>
+          <GalleryItem
+            href="https://ink.carta.com/"
+            caption="ink"
+            img="https://camo.githubusercontent.com/19dd75e12e7e07008e378a77075a450efc41b7d6/68747470733a2f2f64656d6f2e63617274612e636f6d2f7374617469632f6c69622f657368617265732f696d672f696e6b2f696e6b2e737667"
+          />
+          <GalleryItem
+            href="http://www.gfx.adv.br/"
+            caption="GFX"
+            img="http://www.gfx.adv.br/wp-content/uploads/2017/02/header-retina.png"
+          />
+        </Gallery>
+      </React.Fragment>
     );
   }
 }

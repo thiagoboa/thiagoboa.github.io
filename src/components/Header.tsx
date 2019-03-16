@@ -10,6 +10,11 @@ const StyledHeader = styled.header`
   padding: 10px 20px;
 `;
 
+const Signature = styled.h1`
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+`;
+
 const NavLink = styled.a`
   color: ${Theme.header.color};
 `;
@@ -22,7 +27,7 @@ class Header extends Component {
   render() {
     return (
       <StyledHeader>
-        <strong>Thiago Boa</strong>
+        <Signature>thiago_boa</Signature>
         <NavLink
           href="https://reactjs.org"
           target="_blank"
