@@ -29,7 +29,7 @@ class Home extends Component {
         <Billboard>
           <Hero>Design</Hero>
           <Roulette slides={["&", "+"]} />
-          <Hero>Code</Hero>
+          <Hero>Code!</Hero>
         </Billboard>
         <Gallery>
           <GalleryItem
