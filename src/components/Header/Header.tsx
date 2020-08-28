@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import useScrollPosition from "@react-hook/window-scroll";
+
 import { Theme } from "../../assets/style/Theme";
 import logoPath from "../../assets/images/TB_logo.svg";
 import Container from "../Container/Container";
@@ -12,6 +14,9 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 10;
+  transition: background-color 150ms;
+
+  ${({ top }) => top && `background-color: transparent;`}
 `;
 
 const HeaderContent = styled.div`
@@ -54,9 +59,11 @@ const Links = [
   },
 ];
 
-function Header() {
+const Header = () => {
+  const scrollY = useScrollPosition();
+
   return (
-    <StyledHeader>
+    <StyledHeader top={scrollY < 50}>
       <Container>
         <HeaderContent>
           <Logo src={logoPath} />
@@ -71,6 +78,6 @@ function Header() {
       </Container>
     </StyledHeader>
   );
-}
+};
 
 export default Header;

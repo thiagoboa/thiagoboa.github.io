@@ -17,7 +17,7 @@ const StyledGalleryItem = styled.a`
   text-decoration: none;
   color: ${colorPallet.black};
   overflow: hidden;
-  transition: border-color 500ms, box-shadow 500ms;
+  transition: border-color 150ms, box-shadow 150ms;
 
   &:hover {
     border-color: #9d9d9d;
