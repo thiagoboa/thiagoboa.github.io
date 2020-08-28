@@ -1,17 +1,26 @@
 {
-  "main.js": "/static/js/main.7049bbee.chunk.js",
-  "main.js.map": "/static/js/main.7049bbee.chunk.js.map",
-  "static/css/1.80d575cc.chunk.css": "/static/css/1.80d575cc.chunk.css",
-  "static/js/1.034197ac.chunk.js": "/static/js/1.034197ac.chunk.js",
-  "static/js/1.034197ac.chunk.js.map": "/static/js/1.034197ac.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/TB_logo.svg": "/static/media/TB_logo.43cd998e.svg",
-  "static/media/thiago_boa.png": "/static/media/thiago_boa.c9a5f7e5.png",
-  "static/media/chiave_logo.png": "/static/media/chiave_logo.67781215.png",
-  "static/media/gfx_logo.png": "/static/media/gfx_logo.bbc4e135.png",
-  "static/css/1.80d575cc.chunk.css.map": "/static/css/1.80d575cc.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.a72576d50e125de7c059c755fef88490.js": "/precache-manifest.a72576d50e125de7c059c755fef88490.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.js": "/static/js/main.f716d55b.chunk.js",
+    "main.js.map": "/static/js/main.f716d55b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.55252a19.js",
+    "runtime-main.js.map": "/static/js/runtime-main.55252a19.js.map",
+    "static/css/2.0971e70a.chunk.css": "/static/css/2.0971e70a.chunk.css",
+    "static/js/2.4893d1e9.chunk.js": "/static/js/2.4893d1e9.chunk.js",
+    "static/js/2.4893d1e9.chunk.js.map": "/static/js/2.4893d1e9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d7c698264ad12e595e3f06cc49cefbfc.js": "/precache-manifest.d7c698264ad12e595e3f06cc49cefbfc.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.0971e70a.chunk.css.map": "/static/css/2.0971e70a.chunk.css.map",
+    "static/js/2.4893d1e9.chunk.js.LICENSE.txt": "/static/js/2.4893d1e9.chunk.js.LICENSE.txt",
+    "static/media/TB_logo.svg": "/static/media/TB_logo.43cd998e.svg",
+    "static/media/chiave_logo.png": "/static/media/chiave_logo.67781215.png",
+    "static/media/gfx_logo.png": "/static/media/gfx_logo.bbc4e135.png",
+    "static/media/thiago_boa.png": "/static/media/thiago_boa.c9a5f7e5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.55252a19.js",
+    "static/css/2.0971e70a.chunk.css",
+    "static/js/2.4893d1e9.chunk.js",
+    "static/js/main.f716d55b.chunk.js"
+  ]
 }
