@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
 const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 16px 24px;
+  padding: 16px;
 `;
 
 const Nav = styled.nav`

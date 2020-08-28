@@ -57,10 +57,11 @@ const Description = styled.p`
 const Avatar = styled.img`
   width: 400px;
   height: auto;
+  margin-left: 16px;
 `;
 
 const Section = styled.section`
-  padding: 24px;
+  padding: 24px 16px;
 `;
 
 const SectionTitle = styled.h3`
