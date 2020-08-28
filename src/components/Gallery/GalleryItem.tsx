@@ -46,11 +46,11 @@ const GalleryImageWrapper = styled.div`
 const GalleryImage = styled.img`
   max-height: 100%;
   max-width: 100%;
-  filter: saturate(0.5);
-  transition: filter 500ms;
+  opacity: 1;
+  transition: opacity 150ms;
 
   ${StyledGalleryItem}:hover & {
-    filter: saturate(1);
+    opacity: 0.8;
   }
 `;
 
