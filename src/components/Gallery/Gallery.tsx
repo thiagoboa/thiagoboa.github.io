@@ -4,8 +4,9 @@ import { Theme } from "../../assets/style/Theme";
 
 const StyledGallery = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 6fr 4fr 3fr;
+  grid-template-rows: 1fr;
+  grid-gap: 16px;
 `;
 
 class Gallery extends Component {
