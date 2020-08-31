@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Theme } from "../../assets/style/Theme";
 
 const StyledGallery = styled.div`
   display: grid;

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
 import Header from "./components/Header/Header";
@@ -23,14 +22,12 @@ class App extends Component {
     return (
       <React.Fragment>
         <GlobalStyle />
-        <Router>
-          <React.Fragment>
-            <Header />
-            <main>
-              <Route exact path="/" component={Home} />
-            </main>
-          </React.Fragment>
-        </Router>
+        <React.Fragment>
+          <Header />
+          <main>
+            <Home />
+          </main>
+        </React.Fragment>
       </React.Fragment>
     );
   }
