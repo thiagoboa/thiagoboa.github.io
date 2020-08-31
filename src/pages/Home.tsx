@@ -21,8 +21,8 @@ const Banner = styled.div`
 const BannerContent = styled.div`
   display: flex;
   align-items: flex-end;
-  height: 500px;
-  max-height: 80vh;
+  height: 520px;
+  max-height: 90vh;
   position: relative;
   z-index: 1;
 `;
@@ -51,14 +51,13 @@ const Greeting = styled.div`
 const Description = styled.p`
   font-size: 20px;
   max-width: 80%;
-  width: 320px;
   font-weight: 300;
 `;
 
 const Avatar = styled.img`
-  width: 400px;
   height: auto;
   margin-left: 16px;
+  width: 400px;
 `;
 
 const Section = styled.section`
@@ -66,6 +65,7 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h3`
+  border-bottom: 6px solid #e55563;
   font-family: ${Theme.font.headings};
   font-size: 2rem;
   margin: 0 0 16px;
@@ -111,7 +111,8 @@ class Home extends Component {
                   Hey, I'm Thiago Bôa
                 </Heading>
                 <Description>
-                  A design technologist in love with Design Systems
+                  Experienced Design Technologist with a solid background in
+                  both product design and front end development.
                 </Description>
               </Greeting>
             </BannerContent>
