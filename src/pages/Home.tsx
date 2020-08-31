@@ -21,10 +21,18 @@ const Banner = styled.div`
 const BannerContent = styled.div`
   display: flex;
   align-items: flex-end;
-  height: 520px;
-  max-height: 90vh;
+  height: 360px;
+  max-height: 80vh;
   position: relative;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    height: 440px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 520px;
+  }
 `;
 
 const Paint = styled.div`
@@ -33,31 +41,76 @@ const Paint = styled.div`
   top: 0;
   bottom: 0;
   left: 0;
-  width: calc((100vw - 1024px) / 2 + 350px);
+  width: 70px;
+
+  @media (min-width: 768px) {
+    width: calc(45% - 90px);
+  }
+
+  @media (min-width: 1024px) {
+    width: calc((100vw - 1024px) / 2 + 350px);
+  }
+`;
+
+const Greeting = styled.div`
+  margin-top: 24px;
+  padding: 24px 16px 24px 8px;
+  flex: 1;
+
+  @media (min-width: 768px) {
+    margin-top: 48px;
+    padding: 48px 32px;
+  }
 `;
 
 const Heading = styled.h1`
   font-family: ${Theme.font.headings};
   margin: 0;
-  ${({ theme }) => theme};
+  font-size: 2rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 5rem;
+  }
 `;
 
-const Greeting = styled.div`
-  margin-top: 48px;
-  padding: 48px 32px;
-  flex: 1;
+const SubHeading = styled.h2`
+  font-family: ${Theme.font.headings};
+  margin: 0;
+  font-size: 1.5rem;
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2.5rem;
+    margin-top: 48px;
+  }
 `;
 
 const Description = styled.p`
-  font-size: 20px;
-  max-width: 80%;
   font-weight: 300;
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    max-width: 80%;
+  }
 `;
 
 const Avatar = styled.img`
   height: auto;
-  margin-left: 16px;
+  margin-left: -40px;
   width: 400px;
+  max-width: 45%;
+
+  @media (min-width: 1024px) {
+    margin-left: 16px;
+  }
 `;
 
 const Section = styled.section`
@@ -86,6 +139,12 @@ const TrajectoryText = styled.div`
   font-size: 20px;
 `;
 
+const Caption = styled.p`
+  color: #707070;
+  font-size: 1rem;
+  text-align: center;
+`;
+
 const Contact = styled.div`
   display: flex;
 `;
@@ -101,15 +160,8 @@ class Home extends Component {
             <BannerContent>
               <Avatar src={avatarPath} />
               <Greeting>
-                <Heading theme={{ fontSize: "5rem" }}>
-                  Design &lt;&gt; Code
-                </Heading>
-                <Heading
-                  as="h2"
-                  theme={{ fontSize: "2.5rem", marginTop: "48px" }}
-                >
-                  Hey, I'm Thiago Bôa
-                </Heading>
+                <Heading>Design &lt;&gt; Code</Heading>
+                <SubHeading>Hey, I'm Thiago Bôa</SubHeading>
                 <Description>
                   Experienced Design Technologist with a solid background in
                   both product design and front end development.
@@ -216,32 +268,31 @@ class Home extends Component {
                   I was also responsible for choosing and implementing React as
                   our framework for a brand new product called Claro RBT.
                 </p>
-                <p>
-                  The recent experience with React and my design formation were
-                  a perfect fit for Carta — a fintech born in the Bay Area that,
-                  in 2017, just closed their C Round of investment, with around
-                  250 employees across US and Brazil. I've started as a
-                  Producer, a role that was a mix of UI/UX Designer, Product
-                  Manager and Front End Developer. As the company grew, the
-                  roles and the teams were becoming more specific and, after
-                  several reorgs, I was assigned to a team with 2 other
-                  designers, called Platform Design. Our challenge was to create
-                  a consistent user experience in a rapid growing company. To
-                  address this and many other technical challenges we created
-                  Ink, Carta’s Design System. Composed of design principles,
-                  usage guidelines, Figma prototyping tools and more than 90
-                  modular React components, Ink was made from scratch to best
-                  suit the complex pool of services provided by the platform.
-                  During the following couple of years, the system was adopted
-                  on more than 70% of all user interfaces, saving several hours
-                  of development and assuring a reliable and consistent
-                  experience for all Carta customers.
-                </p>
-                <p>
-                  Here is an infographic, summarizing my expericen with
-                  different technologies over those years.
-                </p>
                 <TrajectoryImage src={trajectoryPath} />
+                <Caption>
+                  This infographic summarizes my experience with different
+                  technologies over the years.
+                </Caption>
+                <p>
+                  The contact with React and my design formation were a perfect
+                  fit for Carta — a fintech born in the Bay Area that, in 2017,
+                  just closed their C Round of investment, with around 250
+                  employees across US and Brazil. I've started as a Producer, a
+                  role that was a mix of UI/UX Designer, Product Manager and
+                  Front End Developer. As the company grew, the roles and the
+                  teams were becoming more specific and, after several reorgs, I
+                  was assigned to a team with 2 other designers, called Platform
+                  Design. Our challenge was to create a consistent user
+                  experience in a rapid growing company. To address this and
+                  many other technical challenges we created Ink, Carta’s Design
+                  System. Composed of design principles, usage guidelines, Figma
+                  prototyping tools and more than 90 modular React components,
+                  Ink was made from scratch to best suit the complex pool of
+                  services provided by the platform. During the following couple
+                  of years, the system was adopted on more than 70% of all user
+                  interfaces, saving several hours of development and assuring a
+                  reliable and consistent experience for all Carta customers.
+                </p>
               </TrajectoryText>
             </TrajectorySection>
           </Section>
