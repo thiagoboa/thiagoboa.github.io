@@ -2,6 +2,7 @@
 
 export const colorPallet = {
   pink: "#e55564",
+  darkPink: "#da2235",
   blue: "#002e9f",
   white: "#ffffff",
   black: "#323232",
@@ -12,7 +13,7 @@ export const Theme = {
   global: {
     bg: colorPallet.white,
     color: colorPallet.black,
-    linkColor: colorPallet.blue,
+    linkColor: colorPallet.darkPink,
   },
   font: { headings: '"Oswald", sans-serif' },
   header: { bg: colorPallet.black, color: colorPallet.white },

@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   z-index: 10;
   transition: background-color 150ms;
 
-  ${({ top }) => top && `background-color: transparent;`}
+  ${({ theme }) => theme.scrollTop && `background-color: transparent;`}
 `;
 
 const HeaderContent = styled.div`
@@ -27,10 +27,16 @@ const HeaderContent = styled.div`
 
 const Nav = styled.nav`
   display: grid;
-  grid-gap: 24px;
+  grid-gap: 16px;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, max-content);
   font-family: ${Theme.font.headings};
+  font-size: 14px;
+
+  @media (min-width: 768px) {
+    grid-gap: 24px;
+    font-size: 1rem;
+  }
 `;
 
 const NavLink = styled.a`
@@ -63,7 +69,7 @@ const Header = () => {
   const scrollY = useScrollPosition();
 
   return (
-    <StyledHeader top={scrollY < 50}>
+    <StyledHeader theme={{ scrollTop: scrollY < 50 }}>
       <Container>
         <HeaderContent>
           <Logo src={logoPath} />

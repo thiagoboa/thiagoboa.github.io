@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faWhatsappSquare,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 import { Theme } from "../assets/style/Theme";
 import Gallery from "../components/Gallery/Gallery";
@@ -11,6 +17,7 @@ import chiaveLogoPath from "../assets/images/chiave_logo.png";
 import gfxLogoPath from "../assets/images/gfx_logo.png";
 import inkLogoPath from "../assets/images/ink_logo.png";
 import trajectoryPath from "../assets/images/trajectory.svg";
+import locationPath from "../assets/images/location.svg";
 
 const Banner = styled.div`
   background-color: ${Theme.banner.bg};
@@ -145,11 +152,41 @@ const Caption = styled.p`
   text-align: center;
 `;
 
+const ContactWrapper = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
+const Contacts = styled.div`
+  @media (min-width: 768px) {
+    width: 60%;
+    padding-left: 32px;
+  }
+`;
+
 const Contact = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const ContactLink = styled.a``;
+
+const ContactIcon = styled.div`
+  font-size: 30px;
+  height: 40px;
+  width: 40px;
+`;
+
+const ContactImage = styled.div`
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+`;
+
+const LocationImage = styled.img`
+  width: 100%;
+`;
 
 class Home extends Component {
   render() {
@@ -298,25 +335,44 @@ class Home extends Component {
           </Section>
           <Section>
             <SectionTitle id="contact">Contact</SectionTitle>
-            <Contact>
-              <ContactLink
-                href="https://www.linkedin.com/in/thiagoboa/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linkedin.com/in/thiagoboa
-              </ContactLink>
-            </Contact>
-            <Contact>
-              <ContactLink href="mailto:thiagoboat@gmail.com">
-                thiagoboat@gmail.com
-              </ContactLink>
-            </Contact>
-            <Contact>
-              <ContactLink href="tel:+5521998518219">
-                +55 21 99851-8219
-              </ContactLink>
-            </Contact>
+            <ContactWrapper>
+              <ContactImage>
+                <LocationImage src={locationPath} />
+              </ContactImage>
+              <Contacts>
+                <p>
+                  Don't be a stranger. <strong>Get in touch:</strong>
+                </p>
+                <Contact>
+                  <ContactIcon>
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </ContactIcon>
+                  <ContactLink
+                    href="https://www.linkedin.com/in/thiagoboa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkedin.com/in/thiagoboa
+                  </ContactLink>
+                </Contact>
+                <Contact>
+                  <ContactIcon>
+                    <FontAwesomeIcon icon={faEnvelopeSquare} />
+                  </ContactIcon>
+                  <ContactLink href="mailto:thiagoboat@gmail.com">
+                    thiagoboat@gmail.com
+                  </ContactLink>
+                </Contact>
+                <Contact>
+                  <ContactIcon>
+                    <FontAwesomeIcon icon={faWhatsappSquare} />
+                  </ContactIcon>
+                  <ContactLink href="tel:+5521998518219">
+                    +55 21 99851-8219
+                  </ContactLink>
+                </Contact>
+              </Contacts>
+            </ContactWrapper>
           </Section>
         </Container>
       </React.Fragment>
